@@ -44,3 +44,11 @@ cmake --build .
 ```
 
 If you have any problems, questions or comments, please don't hesitate to open an issue, or [contact us on mattermost](https://tightrope.seymour.global/signup_user_complete/?id=io8xcu5aotg65bmjmoe94supwy).
+
+### Documentation
+
+OpenVPN-Authenticator is well documented in-source, but for the sake of completion, you can find a full `doxygen` generated HTML documenation site [here](https://openvpn-access.github.io/authenticator/).
+
+### Contributing
+
+Issues, pull requests, etc. are very welcome. We are always looking for more people to help us maintain and improve this project. If you don't know where to start, or have any questions, please contact us on [mattermost](https://tightrope.seymour.global/signup_user_complete/?id=io8xcu5aotg65bmjmoe94supwy), or send an email to Nathan Seymour <nathan@seymour.global>.
