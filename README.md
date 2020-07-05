@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img width="300" src="https://github.com/openvpn-access/authenticator/blob/master/media/vpnms.png" alt="Logo">
+    <img width="300" src="https://raw.githubusercontent.com/openvpn-access/authenticator/master/media/vpnms.png" alt="Logo">
 </h1>
 
 <h3 align="center">
