@@ -1,0 +1,8 @@
+db:
+  user: root
+  password: password
+  host: 192.168.99.100
+  database: vpn
+log:
+  verb: 03000
+  file: login.log
