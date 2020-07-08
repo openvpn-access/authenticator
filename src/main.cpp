@@ -181,6 +181,7 @@ void query_user(mariadb::connection_ref &connection, user_info &user)
             user.user_type = res->get_string("user_type");
             user.expiry = res->get_unsigned32("expiry");
         } else {
+            log("User does not exist!", AUTH_REJECT_NO_USER);
             connection->disconnect();
             do_exit(1);
         }

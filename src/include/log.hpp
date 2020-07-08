@@ -26,6 +26,7 @@
 #define AUTH_REJECT_EMPTY_CRED  VERB_2 | ERROR | 005
 #define AUTH_REJECT_BAD_PASSWD  VERB_2 | ERROR | 007
 #define AUTH_REJECT_EOF         VERB_2 | ERROR | 010
+#define AUTH_REJECT_NO_USER     VERB_2 | ERROR | 011
 
 #define DBG_LOG                 VERB_3 | NOERR | 004
 
