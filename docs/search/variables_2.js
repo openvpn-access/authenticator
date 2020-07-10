@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hash_63',['hash',['../structuser__info.html#a92e83ae433e4f08b613ca3b02de82100',1,'user_info']]]
+  ['hash_79',['hash',['../class_user.html#a86bd55fec6d687187df4b03e6d4b5095',1,'User']]]
 ];

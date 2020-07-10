@@ -16,7 +16,13 @@ add_custom_target(documentation ALL
 
 # Main executable
 set(AUTHENTICATOR_SOURCES
-		src/main.cpp)
+		src/main.cpp
+		src/authentication.cpp
+		src/database.cpp
+		src/log.cpp
+		src/util.cpp
+		src/config.cpp
+		src/user.cpp)
 
 set(AUTHENTICATOR_INCLUDES
 		src/include)
