@@ -43,18 +43,17 @@ if(BUILD_TESTS)
 			${AUTHENTICATOR_SOURCES}
 			test/main.test.cpp)
 	target_include_directories(authenticator-tests PRIVATE ${AUTHENTICATOR_INCLUDES})
-	target_compile_options(authenticator-tests PUBLIC -DTESTING --coverage)
-	target_link_options(authenticator-tests PUBLIC -fprofile-arcs -ftest-coverage)
+	target_compile_options(authenticator-tests PUBLIC -DTESTING)
 	add_dependencies(authenticator-tests copy-test-files)
 
 	add_dependencies(authenticator authenticator-tests)
 
 	if(RUN_TESTS)
-		add_custom_target(TARGET authenticator POST_BUILD
+		add_custom_command(TARGET authenticator POST_BUILD
 				WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
-				COMMAND ./authenticator-tests
-				WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/CMakeFiles/authenticator-tests.dir/src
-				COMMAND gcov ./*.o)
+				COMMAND ./authenticator-tests)
+
+		# add_dependencies(authenticator run-tests)
 	endif()
 endif()
 
