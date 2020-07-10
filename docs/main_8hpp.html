@@ -93,7 +93,7 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structuser__info.html">user_info</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_user.html">User</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
@@ -109,16 +109,10 @@ Functions</h2></td></tr>
 <tr class="separator:a99887b0f76bf4328335ff4a1abbc5877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a425eb23917a389284421ea8e92f3a652"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a425eb23917a389284421ea8e92f3a652">log</a> (const std::string &amp;log_string, unsigned int code=<a class="el" href="log_8hpp.html#adeaf15db05e0d4bcb5930a1538091eb0">DBG_LOG</a>)</td></tr>
 <tr class="separator:a425eb23917a389284421ea8e92f3a652"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7007689f14287d9e07bba8b390cff3fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a7007689f14287d9e07bba8b390cff3fa">populate_user_credentials</a> (const std::string &amp;credentials_path, <a class="el" href="structuser__info.html">user_info</a> &amp;user)</td></tr>
-<tr class="separator:a7007689f14287d9e07bba8b390cff3fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a044172b484acd603a586dd371178c337"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a044172b484acd603a586dd371178c337">query_user</a> (mariadb::connection_ref &amp;connection, <a class="el" href="structuser__info.html">user_info</a> &amp;user)</td></tr>
-<tr class="separator:a044172b484acd603a586dd371178c337"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa83cff11151a802111126d8856f0e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#afaa83cff11151a802111126d8856f0e3">verify_password</a> (<a class="el" href="structuser__info.html">user_info</a> &amp;user)</td></tr>
-<tr class="separator:afaa83cff11151a802111126d8856f0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7300be3490118acba4682e3a3ac2c9bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a7300be3490118acba4682e3a3ac2c9bb">time_ctrl</a> ()</td></tr>
 <tr class="separator:a7300be3490118acba4682e3a3ac2c9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac29c5fa6474ce054798c2bbd990386c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#ac29c5fa6474ce054798c2bbd990386c4">authenticate_user</a> (<a class="el" href="structuser__info.html">user_info</a> &amp;user, const YAML::Node &amp;config)</td></tr>
-<tr class="separator:ac29c5fa6474ce054798c2bbd990386c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a052f8e2c49de65143e144236579ffd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a052f8e2c49de65143e144236579ffd5a">authenticate_user</a> (std::shared_ptr&lt; <a class="el" href="class_user.html">User</a> &gt; &amp;user, const YAML::Node &amp;config)</td></tr>
+<tr class="separator:a052f8e2c49de65143e144236579ffd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c05ea15eed452958f91c476b248ea63"><td class="memItemLeft" align="right" valign="top">mariadb::connection_ref&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a6c05ea15eed452958f91c476b248ea63">connect</a> (const YAML::Node &amp;config)</td></tr>
 <tr class="separator:a6c05ea15eed452958f91c476b248ea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a25ea614b82c1d3464a0396030d77af9d"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a25ea614b82c1d3464a0396030d77af9d">parse_config</a> (const char *executable_path)</td></tr>
@@ -163,8 +157,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ac29c5fa6474ce054798c2bbd990386c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac29c5fa6474ce054798c2bbd990386c4">&#9670;&nbsp;</a></span>authenticate_user()</h2>
+<a id="a052f8e2c49de65143e144236579ffd5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a052f8e2c49de65143e144236579ffd5a">&#9670;&nbsp;</a></span>authenticate_user()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +166,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void authenticate_user </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structuser__info.html">user_info</a> &amp;&#160;</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_user.html">User</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>user</em>, </td>
         </tr>
         <tr>
@@ -190,13 +184,13 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Performs standard user authentication. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">user</td><td>User object with <code>username</code> and <code>password</code> already populated. </td></tr>
+    <tr><td class="paramname">user</td><td><a class="el" href="class_user.html">User</a> object with <code>username</code> and <code>password</code> already populated. </td></tr>
     <tr><td class="paramname">config</td><td>Parsed config file node. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00227">227</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="authentication_8cpp_source.html#l00008">8</a> of file <a class="el" href="authentication_8cpp_source.html">authentication.cpp</a>.</p>
 
 </div>
 </div>
@@ -223,7 +217,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Connection to the MariaDB database. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00061">61</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="database_8cpp_source.html#l00008">8</a> of file <a class="el" href="database_8cpp_source.html">database.cpp</a>.</p>
 
 </div>
 </div>
@@ -249,7 +243,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00018">18</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8cpp_source.html#l00007">7</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 </div>
 </div>
@@ -286,7 +280,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00033">33</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="log_8cpp_source.html#l00008">8</a> of file <a class="el" href="log_8cpp_source.html">log.cpp</a>.</p>
 
 </div>
 </div>
@@ -315,81 +309,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The parsed YAML::Node. </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00092">92</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a7007689f14287d9e07bba8b390cff3fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7007689f14287d9e07bba8b390cff3fa">&#9670;&nbsp;</a></span>populate_user_credentials()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void populate_user_credentials </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>credentials_path</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structuser__info.html">user_info</a> &amp;&#160;</td>
-          <td class="paramname"><em>user</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Open credentials file and populate <code>user</code> with the credentials given to us by OpenVPN. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">credentials_path</td><td>Path to the file that OpenVPN passes to us. </td></tr>
-    <tr><td class="paramname">user</td><td>User to populate. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00139">139</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-</div>
-</div>
-<a id="a044172b484acd603a586dd371178c337"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a044172b484acd603a586dd371178c337">&#9670;&nbsp;</a></span>query_user()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void query_user </td>
-          <td>(</td>
-          <td class="paramtype">mariadb::connection_ref &amp;&#160;</td>
-          <td class="paramname"><em>connection</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="structuser__info.html">user_info</a> &amp;&#160;</td>
-          <td class="paramname"><em>user</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Find user through database connection ref and populate subsequent user object. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">connection</td><td>Connection to MariaDB database. </td></tr>
-    <tr><td class="paramname">user</td><td>User that we are searching for. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00170">170</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="config_8cpp_source.html#l00011">11</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
 
 </div>
 </div>
@@ -409,33 +329,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Thread function to ensure random runtimes for the application to help prevent time attacks. Program will run for at least a random number between 1-TIME_ATTACK_DEFENSE_TIMER_MS ms. </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00213">213</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
-
-</div>
-</div>
-<a id="afaa83cff11151a802111126d8856f0e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaa83cff11151a802111126d8856f0e3">&#9670;&nbsp;</a></span>verify_password()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void verify_password </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structuser__info.html">user_info</a> &amp;&#160;</td>
-          <td class="paramname"><em>user</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Check the provided user password string against the hash from the database and exit(1) if not the same. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">user</td><td>User of which to verify password. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00199">199</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="util_8cpp_source.html#l00021">21</a> of file <a class="el" href="util_8cpp_source.html">util.cpp</a>.</p>
 
 </div>
 </div>

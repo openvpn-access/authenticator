@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['user_5finfo_38',['user_info',['../structuser__info.html',1,'']]],
-  ['user_5ftype_39',['user_type',['../structuser__info.html#ade1deda4a7cbc960b31ef37e7a8fda9c',1,'user_info']]],
-  ['username_40',['username',['../structuser__info.html#a142bc3e5849a769fec310d7180d78ee2',1,'user_info']]]
+  ['user_43',['User',['../class_user.html',1,'User'],['../class_user.html#a468287ccb1be6288458d2a66a05d1c94',1,'User::User()']]],
+  ['user_2ecpp_44',['user.cpp',['../user_8cpp.html',1,'']]],
+  ['user_5fstate_45',['user_state',['../class_user.html#a83da0dad95a10e5e6d8bcd950785f10b',1,'User']]],
+  ['user_5ftype_46',['user_type',['../class_user.html#af41a733b8532fdc16e96d4ea3a657cad',1,'User']]],
+  ['username_47',['username',['../class_user.html#aacbb807e514280f69e00bec7d71f3aee',1,'User']]],
+  ['util_2ecpp_48',['util.cpp',['../util_8cpp.html',1,'']]]
 ];

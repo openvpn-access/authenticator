@@ -26,23 +26,32 @@
     #define CONFIG_FILE_NAME "authenticator.yml"
 #endif
 
-typedef struct {
+class User {
+private:
+    mariadb::connection_ref connection;
+
+public:
     std::string username;
     std::string password;
     std::string hash;
     std::string user_type;
+    std::string user_state;
     unsigned long expiry;
-} user_info;
+    bool email_verified;
+    int id;
+
+    void verify_password();
+
+    User(const std::string& credentials_path, mariadb::connection_ref connection);
+    ~User();
+};
 
 extern std::thread time_ctrl_thread;
 
 void do_exit(int code);
 void log(const std::string& log_string, unsigned int code = DBG_LOG);
-void populate_user_credentials(const std::string& credentials_path, user_info &user);
-void query_user(mariadb::connection_ref &connection, user_info &user);
-void verify_password(user_info& user);
 void time_ctrl();
-void authenticate_user(user_info& user, const YAML::Node& config);
+void authenticate_user(std::shared_ptr<User>& user, const YAML::Node& config);
 
 mariadb::connection_ref connect(const YAML::Node &config);
 YAML::Node parse_config(const char* executable_path);

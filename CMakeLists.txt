@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Options
 option(BUILD_TESTS "Build authenticator tests" ON)
+option(RUN_TESTS "Run tests automatically" ON)
 option(GENERATE_DOCUMENTATION "Generate documentation" ON)
 
 # Documentation
@@ -15,7 +16,13 @@ add_custom_target(documentation ALL
 
 # Main executable
 set(AUTHENTICATOR_SOURCES
-		src/main.cpp)
+		src/main.cpp
+		src/authentication.cpp
+		src/database.cpp
+		src/log.cpp
+		src/util.cpp
+		src/config.cpp
+		src/user.cpp)
 
 set(AUTHENTICATOR_INCLUDES
 		src/include)
@@ -36,11 +43,18 @@ if(BUILD_TESTS)
 			${AUTHENTICATOR_SOURCES}
 			test/main.test.cpp)
 	target_include_directories(authenticator-tests PRIVATE ${AUTHENTICATOR_INCLUDES})
-	target_compile_options(authenticator-tests PUBLIC -DTESTING)
+	target_compile_options(authenticator-tests PUBLIC -DTESTING --coverage)
+	target_link_options(authenticator-tests PUBLIC -fprofile-arcs -ftest-coverage)
 	add_dependencies(authenticator-tests copy-test-files)
 
-	if(GENERATE_DOCUMENTATION)
-		add_dependencies(authenticator-tests documentation)
+	add_dependencies(authenticator authenticator-tests)
+
+	if(RUN_TESTS)
+		add_custom_target(TARGET authenticator POST_BUILD
+				WORKING_DIRECTORY ${PROJECT_BINARY_DIR}
+				COMMAND ./authenticator-tests
+				WORKING_DIRECTORY ${PROJECT_BINARY_DIR}/CMakeFiles/authenticator-tests.dir/src
+				COMMAND gcov ./*.o)
 	endif()
 endif()
 
@@ -71,14 +85,13 @@ add_custom_target(libbcrypt-build ALL
 		COMMAND make)
 
 target_include_directories(authenticator PUBLIC SYSTEM ${libbcrypt_SOURCE_DIR})
-find_library(LIB_BCRYPT bcrypt.a HINTS ${libbcrypt_SOURCE_DIR})
-target_link_libraries(authenticator ${LIB_BCRYPT})
 add_dependencies(authenticator libbcrypt-build)
+target_link_libraries(authenticator ${libbcrypt_SOURCE_DIR}/bcrypt.a)
 
 if(BUILD_TESTS)
 	target_include_directories(authenticator-tests PUBLIC SYSTEM ${libbcrypt_SOURCE_DIR})
-	target_link_libraries(authenticator-tests ${LIB_BCRYPT})
 	add_dependencies(authenticator-tests libbcrypt-build)
+	target_link_libraries(authenticator-tests ${libbcrypt_SOURCE_DIR}/bcrypt.a)
 endif()
 
 # Grab mariadbcpp

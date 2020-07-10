@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['expiry_61',['expiry',['../structuser__info.html#a55875afb66a4075aea2a7d8f93c1de7b',1,'user_info']]]
+  ['email_5fverified_76',['email_verified',['../class_user.html#ae146eaabb7c1a054656dc93b43c5114d',1,'User']]],
+  ['expiry_77',['expiry',['../class_user.html#af47d5304dec3d5c4c406c28741968cd8',1,'User']]]
 ];
