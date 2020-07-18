@@ -2,7 +2,6 @@
 
 #ifdef TESTING
     #include <gtest/gtest.h>
-    const char* application_executable_path;
 #endif
 
 // Global vars
@@ -18,7 +17,9 @@ int main(int argc, char** argv) {
 
     // Parse config
     log("Parsing config file...");
-    YAML::Node config = parse_config(argv[0]);
+
+    std::filesystem::path executable_path = argv[0];
+    YAML::Node config = parse_config((executable_path.remove_filename() / "authenticator.yml").c_str());
 
     // Start auth
     log("Starting authentication...");
@@ -38,14 +39,12 @@ int main(int argc, char** argv) {
     auto user = std::make_shared<User>(argv[1], connection);
 
     // Authenticate
-    authenticate_user(user, config);
+    authenticate_user(user);
 }
 #else
 int main(int argc, char** argv)
 {
     ::testing::InitGoogleTest(&argc, argv);
-
-    application_executable_path = argv[0];
 
     return RUN_ALL_TESTS();
 }

@@ -5,6 +5,6 @@ var searchData=
   ['auth_5freject_5femail_5fnonver_2',['AUTH_REJECT_EMAIL_NONVER',['../log_8hpp.html#a5dfb8e2a0ef155322920314fcfbb359b',1,'log.hpp']]],
   ['auth_5freject_5fempty_5fcred_3',['AUTH_REJECT_EMPTY_CRED',['../log_8hpp.html#a29342dca4060c1fa4a3e3a2a980a47ec',1,'log.hpp']]],
   ['auth_5freject_5fnot_5factivated_4',['AUTH_REJECT_NOT_ACTIVATED',['../log_8hpp.html#a6574ea54799c9d57631833c6506cffad',1,'log.hpp']]],
-  ['authenticate_5fuser_5',['authenticate_user',['../authentication_8cpp.html#a052f8e2c49de65143e144236579ffd5a',1,'authenticate_user(std::shared_ptr&lt; User &gt; &amp;user, const YAML::Node &amp;config):&#160;authentication.cpp'],['../main_8hpp.html#a052f8e2c49de65143e144236579ffd5a',1,'authenticate_user(std::shared_ptr&lt; User &gt; &amp;user, const YAML::Node &amp;config):&#160;authentication.cpp']]],
+  ['authenticate_5fuser_5',['authenticate_user',['../authentication_8cpp.html#a4e69b67496c3062617d19c915ed013d2',1,'authenticate_user(std::shared_ptr&lt; User &gt; &amp;user):&#160;authentication.cpp'],['../main_8hpp.html#a4e69b67496c3062617d19c915ed013d2',1,'authenticate_user(std::shared_ptr&lt; User &gt; &amp;user):&#160;authentication.cpp']]],
   ['authentication_2ecpp_6',['authentication.cpp',['../authentication_8cpp.html',1,'']]]
 ];

@@ -100,8 +100,6 @@ Classes</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:af1f2f95da20694c47886c5ac4daed5bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#af1f2f95da20694c47886c5ac4daed5bc">TIME_ATTACK_DEFENSE_TIMER_MS</a>&#160;&#160;&#160;500</td></tr>
 <tr class="separator:af1f2f95da20694c47886c5ac4daed5bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62921b92fa4fb37f1e3a5d4c644fc1d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a62921b92fa4fb37f1e3a5d4c644fc1d8">CONFIG_FILE_NAME</a>&#160;&#160;&#160;&quot;authenticator.yml&quot;</td></tr>
-<tr class="separator:a62921b92fa4fb37f1e3a5d4c644fc1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -111,12 +109,12 @@ Functions</h2></td></tr>
 <tr class="separator:a425eb23917a389284421ea8e92f3a652"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7300be3490118acba4682e3a3ac2c9bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a7300be3490118acba4682e3a3ac2c9bb">time_ctrl</a> ()</td></tr>
 <tr class="separator:a7300be3490118acba4682e3a3ac2c9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a052f8e2c49de65143e144236579ffd5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a052f8e2c49de65143e144236579ffd5a">authenticate_user</a> (std::shared_ptr&lt; <a class="el" href="class_user.html">User</a> &gt; &amp;user, const YAML::Node &amp;config)</td></tr>
-<tr class="separator:a052f8e2c49de65143e144236579ffd5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e69b67496c3062617d19c915ed013d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a4e69b67496c3062617d19c915ed013d2">authenticate_user</a> (std::shared_ptr&lt; <a class="el" href="class_user.html">User</a> &gt; &amp;user)</td></tr>
+<tr class="separator:a4e69b67496c3062617d19c915ed013d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c05ea15eed452958f91c476b248ea63"><td class="memItemLeft" align="right" valign="top">mariadb::connection_ref&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a6c05ea15eed452958f91c476b248ea63">connect</a> (const YAML::Node &amp;config)</td></tr>
 <tr class="separator:a6c05ea15eed452958f91c476b248ea63"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25ea614b82c1d3464a0396030d77af9d"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#a25ea614b82c1d3464a0396030d77af9d">parse_config</a> (const char *executable_path)</td></tr>
-<tr class="separator:a25ea614b82c1d3464a0396030d77af9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a0dc8d9a130f3d4d233ded42fa6755"><td class="memItemLeft" align="right" valign="top">YAML::Node&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8hpp.html#af7a0dc8d9a130f3d4d233ded42fa6755">parse_config</a> (const char *config_path)</td></tr>
+<tr class="separator:af7a0dc8d9a130f3d4d233ded42fa6755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -124,22 +122,6 @@ Variables</h2></td></tr>
 <tr class="separator:a5bc083468d03c2c95bdb4a28d79e040f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a62921b92fa4fb37f1e3a5d4c644fc1d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62921b92fa4fb37f1e3a5d4c644fc1d8">&#9670;&nbsp;</a></span>CONFIG_FILE_NAME</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define CONFIG_FILE_NAME&#160;&#160;&#160;&quot;authenticator.yml&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="main_8hpp_source.html#l00027">27</a> of file <a class="el" href="main_8hpp_source.html">main.hpp</a>.</p>
-
-</div>
-</div>
 <a id="af1f2f95da20694c47886c5ac4daed5bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1f2f95da20694c47886c5ac4daed5bc">&#9670;&nbsp;</a></span>TIME_ATTACK_DEFENSE_TIMER_MS</h2>
 
@@ -157,8 +139,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a052f8e2c49de65143e144236579ffd5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a052f8e2c49de65143e144236579ffd5a">&#9670;&nbsp;</a></span>authenticate_user()</h2>
+<a id="a4e69b67496c3062617d19c915ed013d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e69b67496c3062617d19c915ed013d2">&#9670;&nbsp;</a></span>authenticate_user()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -167,18 +149,8 @@ Variables</h2></td></tr>
           <td class="memname">void authenticate_user </td>
           <td>(</td>
           <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_user.html">User</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>user</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>user</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">const YAML::Node &amp;&#160;</td>
-          <td class="paramname"><em>config</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -284,8 +256,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a25ea614b82c1d3464a0396030d77af9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a25ea614b82c1d3464a0396030d77af9d">&#9670;&nbsp;</a></span>parse_config()</h2>
+<a id="af7a0dc8d9a130f3d4d233ded42fa6755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7a0dc8d9a130f3d4d233ded42fa6755">&#9670;&nbsp;</a></span>parse_config()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -294,7 +266,7 @@ Variables</h2></td></tr>
           <td class="memname">YAML::Node parse_config </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>executable_path</em></td><td>)</td>
+          <td class="paramname"><em>config_path</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -346,7 +318,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00009">9</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00008">8</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>

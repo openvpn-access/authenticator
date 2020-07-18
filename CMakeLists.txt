@@ -41,7 +41,12 @@ if(BUILD_TESTS)
 
 	add_executable(authenticator-tests
 			${AUTHENTICATOR_SOURCES}
-			test/main.test.cpp)
+			test/authentication.test.cpp
+			test/config.test.cpp
+			test/database.test.cpp
+			test/log.test.cpp
+			test/user.test.cpp
+			test/util.test.cpp)
 	target_include_directories(authenticator-tests PRIVATE ${AUTHENTICATOR_INCLUDES})
 	target_compile_options(authenticator-tests PUBLIC -DTESTING)
 	add_dependencies(authenticator-tests copy-test-files)

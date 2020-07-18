@@ -3,7 +3,7 @@
 /**
  * Check the provided user password string against the hash from the database and exit(1) if not the same.
  */
-void User::verify_password()
+void User::verify_password() const
 {
     // Check password
     if(bcrypt_checkpw(this->password.c_str(), (const char*) this->hash.c_str()) != 0)
@@ -71,5 +71,8 @@ User::User(const std::string& credentials_path, mariadb::connection_ref connecti
 
 User::~User()
 {
-    this->connection->disconnect();
+    if(this->connection)
+    {
+        this->connection->disconnect();
+    }
 }

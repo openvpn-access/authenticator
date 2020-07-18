@@ -5,7 +5,7 @@
  * @param user User object with `username` and `password` already populated.
  * @param config Parsed config file node.
  */
-void authenticate_user(std::shared_ptr<User>& user, const YAML::Node& config)
+void authenticate_user(std::shared_ptr<User>& user)
 {
     log("Checking provided password against the user's hash...");
     user->verify_password();
